@@ -1,0 +1,36 @@
+# nixpacks.toml — Railway build config
+# Wajib ada supaya Chromium bisa jalan di Railway (no OS)
+
+[phases.setup]
+nixPkgs = [
+  "chromium",
+  "nss",
+  "nspr",
+  "atk",
+  "cups",
+  "libdrm",
+  "dbus",
+  "libxkbcommon",
+  "gtk3",
+  "pango",
+  "cairo",
+  "glib",
+  "alsa-lib",
+  "xorg.libX11",
+  "xorg.libXcomposite",
+  "xorg.libXdamage",
+  "xorg.libXext",
+  "xorg.libXfixes",
+  "xorg.libXrandr",
+  "xorg.libxcb",
+]
+
+[phases.install]
+cmds = [
+  "pip install -r requirements.txt",
+  "playwright install chromium",
+  "playwright install-deps chromium",
+]
+
+[start]
+cmd = "python shopee_scraper.py --keyword \"mouse gaming\" --pages 3"
