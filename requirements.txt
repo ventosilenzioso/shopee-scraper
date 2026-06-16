@@ -1,0 +1,8 @@
+# Shopee Scraper - Railway Deploy
+# Python 3.11+
+
+# Core scraping
+playwright==1.56.0
+
+# Tidak perlu library lain — semua pakai stdlib:
+# asyncio, json, csv, argparse, re, os, sys, urllib.parse, uuid, datetime
