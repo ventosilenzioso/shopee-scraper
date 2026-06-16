@@ -1,1 +1,1 @@
-web: python -m uvicorn shopee_scraper:app --host 0.0.0.0 --port $PORT
+web: bash start.sh
